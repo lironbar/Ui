@@ -26,14 +26,12 @@ component('appComp', {
       $scope.users = users.data;
       $scope.getUnreadMessages();
       $scope.getActivitySum();
-      console.log($scope.users);
     });
 
     graphFactory.tasks(function(tasks) {
       $scope.tasks = tasks.data;
       $scope.getTaskNumber();
       $scope.getDelayedTask();
-      console.log($scope.tasks);
     });
 
     $scope.firstLetter = function(name) {
