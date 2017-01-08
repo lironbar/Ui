@@ -1,0 +1,184 @@
+
+<div id="appSidenav" class="sidenav">
+  <i class="fa fa-circle-thin" aria-hidden="true"></i>
+  <span href="#" class="navHeader">Merkury</span>
+  <label id="sliderIconIn"> &#9776;
+    <input type="checkbox" ng-model="open" ng-change="toggleNav()" class="closebtn hidden" />
+  </label>
+  <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
+  <a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i><span>Workflow</span></a>
+  <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i><span>Statistics</span></a>
+  <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span>Calendar</span></a>
+  <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Users</span></a>
+  <a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Settings</span></a>
+</div>
+<div class="container">
+  <div class="row">
+    <label id="sliderLogo"> &#9776;
+      <input type="checkbox" ng-model="open" ng-change="toggleNav()" class="hidden" />
+    </label>
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <div class="topNav">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div id="main">
+  <div class="container">
+    <div class="row">
+      <h2>Hello {{name}}!</h2>
+    </div>
+
+    <div class="row">
+      <div class="salesBox col-xs-5 col-sm-5 col-md-4 col-lg-4" ng-init="chart = 'app/images/chart.jpg'">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <h3 class="headerTop">Your Sales</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="styled-select">
+              <div class="arrow">
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </div>
+               <select class="paddingNone">
+                  <option>Period Last Year</option>
+                  <option>Period Last Month</option>
+                  <option>Period Last Week</option>
+               </select>
+            </div>
+          </div>
+
+        </div>
+        <img id="chart" ng-src="{{chart}}" />
+      </div>
+
+
+
+      <div class="salesBox col-xs-offset-1 col-xs-6 col-sm-offset-1 col-sm-6 col-md-offset-1 col-md-7 col-lg-offset-1 col-lg-7" ng-init="graph = 'app/images/graph.jpg'">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <h3 class="headerTop">Report</h3>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="styled-select">
+              <div class="arrow">
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </div>
+               <select class="paddingNone">
+                  <option>Period Last Year</option>
+                  <option>Period Last Month</option>
+                  <option>Period Last Week</option>
+               </select>
+            </div>
+          </div>
+
+        </div>
+        <img id="graph" ng-src="{{graph}}" />
+      </div>
+
+    </div>
+
+    <div class="marginTop">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="infoBox">
+        <div class="row infoHeader">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <h4>Tasks</h4>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div id="delayedCircle">
+              <span>{{delayCount}}</span>
+            </div>
+            <div class="circleHead">
+              <span>{{taskNumber}}</span>
+            </div>
+          </div>
+        </div>
+        <ul>
+            <li ng-repeat="task in tasks track by task.id" class="item row">
+              <div class="col-md-2">
+                <div class="circle">
+                  <span>{{firstLetter(task.name)}}</span>
+                </div>
+              </div>
+              <div class="col-md-10">
+              <h5>{{task.name}}</h5>
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span ng-class="getDelayClass(task.time)">{{task.time}}</span>
+            </div>
+            </li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="infoBox">
+        <div class="row infoHeader">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <h4>Messages</h4>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="circleHead">
+              <span>{{unread}}</span>
+            </div>
+          </div>
+        </div>
+        <ul>
+            <li ng-repeat="user in users track by user.id" ng-class="{'item' : user.messageRead, 'msg-unread' : !user.messageRead}" class="row">
+              <div class="col-md-2">
+                <img class="img-circle" ng-src="{{user.img}}" />
+              </div>
+              <div class="col-md-10">
+              <label>{{user.name}}</label>
+              <small>{{user.messageTime}}</small>
+              <p>{{user.message}}</p>
+              <i class="fa fa-reply gray-icon" aria-hidden="true"></i>
+              <i class="fa fa-cog gray-icon" aria-hidden="true"></i>
+            </div>
+            </li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="infoBox">
+        <div class="row infoHeader">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <h4>Activity</h4>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="circleHead">
+              <span>{{activitySum}}</span>
+            </div>
+          </div>
+        </div>
+        <ul>
+            <li ng-repeat="user in users | orderBy:'activityId'" class="item row">
+              <div class="col-md-2">
+                <img class="img-circle" ng-src="{{user.img}}" />
+              </div>
+              <div class="col-md-10">
+              <label>{{user.name}}</label>
+              <span><small>{{user.activityType}}</small></span> <span class="ellipses"><strong class="ellipses">{{user.projectName}}</strong></span>
+              <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i> <span>{{user.activity}}</span>
+              </p>
+
+
+
+            </div>
+            </li>
+        </ul>
+      </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</div>

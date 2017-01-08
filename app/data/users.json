@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Nina Jones",
+    "img": "http://wallpaper-gallery.net/images/profile-pics/profile-pics-20.jpg",
+    "lastSeen": "40 minutes ago",
+    "messageTime": "5 mins ago",
+    "activityId": 6,
+    "activity": "8 hours ago",
+    "activityType": "added a new project",
+    "projectName": "Free Ui Kit",
+    "messageRead": false,
+    "message": "Hey YOU!! its me again :-) i attached"
+  },{
+    "id": 2,
+    "name": "James Smith",
+    "img": "http://www.bordeaux-tourism.co.uk/var/ezwebin_site/storage/images/media/images/regards-bordelais/jean-poutge/profil-jean/12599-2-fre-FR/Profil-Jean_format_360x360.jpg",
+    "lastSeen": "1 houre ago",
+    "messageTime": "about 20 mins ago",
+    "activityId": 4,
+    "activity": "3 hours ago",
+    "activityType": "updated a project",
+    "projectName": "Free PSD Template",
+    "messageRead": false,
+    "message": "Hey YOU!! its me again :-) i attached"
+  },{
+    "id": 3,
+    "name": "Nadav Cohen",
+    "img": "https://pbs.twimg.com/profile_images/1731485432/justin-profile-face.jpg",
+    "lastSeen": "30 minutes ago",
+    "messageTime": "2 days ago",
+    "activityId": 3,
+    "activity": "1 hour ago",
+    "activityType": "commented project",
+    "projectName": "Free Ui Kit",
+    "messageRead": true,
+    "message": "Hey YOU!! its me again :-) i attached"
+  },{
+    "id": 4,
+    "name": "Tom Moderpak",
+    "img": "http://www.csrentertainment.com/file/pic/photo/3bd00b198a4acdcdd6de880c3bbc917d_1024.jpg",
+    "lastSeen": "just now",
+    "messageTime": "5 days ago",
+    "activityId": 2,
+    "activity": "40 mins ago",
+    "activityType": "completed task",
+    "projectName": "Free PSD Template",
+    "messageRead": true,
+    "message": "Hey YOU!! its me again :-) i attached"
+  },{
+    "id": 5,
+    "name": "Dean Kol",
+    "img": "https://drmarktrolice.files.wordpress.com/2014/09/profile-woman.jpg",
+    "lastSeen": "2 houres ago",
+    "messageTime": "a week ago",
+    "activityId": 5,
+    "activity": "4 hours ago",
+    "activityType": "completed task",
+    "projectName": "Symu Website",
+    "messageRead": true,
+    "message": "Hey YOU!! its me again :-) i attached"
+  },{
+    "id": 6,
+    "name": "Alex Clooney",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/8/87/Mani_Zadeh_Profile.jpg",
+    "lastSeen": "5 minutes ago",
+    "messageTime": "2 weeks ago",
+    "activityId": 1,
+    "activity": "just now",
+    "activityType": "added a new project",
+    "projectName": "Free Ui Kit",
+    "messageRead": true,
+    "message": "Hey YOU!! its me again :-) i attached"
+  }
+]
